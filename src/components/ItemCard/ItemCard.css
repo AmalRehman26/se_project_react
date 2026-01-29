@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  background-color: #fafafa;
+}
+
+.card__title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: "Cabinet Grotesk Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #fff;
+  padding: 4px 12px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.card__image-wrapper {
+  background-color: #f3f3f3;
+  padding: 20px;
+  height: 328px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}

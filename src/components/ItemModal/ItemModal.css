@@ -1,0 +1,94 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+.modal_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__content {
+  background: white;
+  max-width: 498px;
+  width: 90%;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal__close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.modal__close::before,
+.modal__close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.modal__close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal__close:hover {
+  opacity: 1;
+}
+
+.modal__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #eee;
+}
+
+.modal__caption {
+  padding: 24px 32px 36px;
+  background: white;
+}
+
+.modal__title {
+  font-family: "Cabinet Grotesk Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: #000;
+}
+
+.modal__weather {
+  font-family: "Cabinet Grotesk Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  color: #000;
+}

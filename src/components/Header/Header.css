@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Cabinet Grotesk Bold", sans-serif;
+}
+
+.header__logo {
+  padding-right: 24px;
+}
+
+.header__add-clothes-btn {
+  margin-left: auto;
+  font-family: "Cabinet Grotesk Bold", sans-serif;
+  border: none;
+  background-color: transparent;
+}
+
+.header__username {
+  padding-left: 20px;
+  padding-right: 12px;
+  font-family: "Cabinet Grotesk Bold", sans-serif;
+}
