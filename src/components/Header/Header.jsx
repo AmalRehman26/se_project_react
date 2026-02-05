@@ -1,13 +1,15 @@
 import logo from "../../images/logo.svg";
 import avatar from "../../images/avatar.svg";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import "./Header.css";
 
-function Header({ handleOpenAddGarmentModal }) {
+function Header({ handleOpenAddGarmentModal, weatherData }) {
   const now = new Date();
-  const dateStr = now.toLocaleDateString("default", {
+  const dateStr = now.toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
   });
+
   return (
     <header className="header">
       <img src={logo} alt="WTWR Logo" className="header__logo" />
@@ -15,8 +17,9 @@ function Header({ handleOpenAddGarmentModal }) {
         <time className="header__datetime" dateTime={now.toISOString()}>
           {dateStr}
         </time>
-        , New York
+        , {weatherData.city || "New York"}
       </p>
+      <ToggleSwitch />
       <button
         onClick={handleOpenAddGarmentModal}
         className="header__add-clothes-btn"
