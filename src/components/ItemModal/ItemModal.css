@@ -23,6 +23,7 @@
   border-radius: 20px;
   position: relative;
   overflow: hidden;
+  padding: 0px;
 }
 
 .modal__close {

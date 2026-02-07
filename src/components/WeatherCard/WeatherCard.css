@@ -6,33 +6,7 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-}
-
-.weather-card_type_sunny-day {
-  background: linear-gradient(135deg, #5ca9ea 0%, #8dd4f7 100%);
-}
-
-.weather-card_type_cloudy-day {
-  background: linear-gradient(135deg, #5ca9ea 0%, #a0d1ec 100%);
-}
-
-.weather-card_type_rain-day,
-.weather-card_type_storm-day,
-.weather-card_type_fog-day {
-  background: linear-gradient(135deg, #7b9db8 0%, #a8c4d6 100%);
-}
-
-.weather-card_type_snow-day {
-  background: linear-gradient(135deg, #89b5d0 0%, #b8d5e5 100%);
-}
-
-.weather-card_type_sunny-night,
-.weather-card_type_cloudy-night,
-.weather-card_type_rain-night,
-.weather-card_type_storm-night,
-.weather-card_type_snow-night,
-.weather-card_type_fog-night {
-  background: linear-gradient(135deg, #1e3a5f 0%, #2b5680 100%);
+  margin-bottom: 40px;
 }
 
 .weather-card__image {
@@ -41,7 +15,7 @@
   top: 0;
   height: 100%;
   width: auto;
-  max-width: 40%;
+  /* max-width: 40%; */
   object-fit: contain;
   object-position: right center;
   pointer-events: none;
