@@ -14,7 +14,7 @@
   right: 0;
   top: 0;
   height: 100%;
-  width: auto;
+  width: 100%;
   /* max-width: 40%; */
   object-fit: contain;
   object-position: right center;

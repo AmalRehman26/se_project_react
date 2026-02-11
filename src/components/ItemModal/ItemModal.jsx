@@ -7,7 +7,11 @@ function ItemModal({ card, isOpen, onClose }) {
     <div className={`modal ${isOpen ? "modal_opened" : ""}`} onClick={onClose}>
       <div className="modal__content" onClick={(e) => e.stopPropagation()}>
         <button type="button" className="modal__close" onClick={onClose} />
-        <img src={card.link} alt={card.name} className="modal__image" />
+
+        <div className="modal__image-container">
+          <img src={card.link} alt={card.name} className="modal__image" />
+        </div>
+
         <div className="modal__caption">
           <h2 className="modal__title">{card.name}</h2>
           <p className="modal__weather">Weather: {card.weather}</p>
