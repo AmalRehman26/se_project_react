@@ -6,6 +6,12 @@
   padding: 20px 0;
   gap: 20px;
 }
+.header__profile {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
 
 .header__logo {
   margin-right: 24px;

@@ -1,12 +1,20 @@
 import "./ItemModal.css";
 
-function ItemModal({ card, isOpen, onClose }) {
+function ItemModal({ card, isOpen, onClose, onDelete }) {
   if (!card) return null;
 
   return (
     <div className={`modal ${isOpen ? "modal_opened" : ""}`} onClick={onClose}>
       <div className="modal__content" onClick={(e) => e.stopPropagation()}>
         <button type="button" className="modal__close" onClick={onClose} />
+
+        <button
+          type="button"
+          className="modal__delete"
+          onClick={() => onDelete(card)}
+        >
+          Delete item
+        </button>
 
         <div className="modal__image-container">
           <img src={card.link} alt={card.name} className="modal__image" />

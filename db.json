@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "_id": "1",
+      "name": "Baseball Cap",
+      "weather": "hot",
+      "link": "https://images.unsplash.com/photo-1588854337116-28a3c8fa50c1"
+    },
+    {
+      "_id": "3",
+      "name": "T-Shirt",
+      "weather": "warm",
+      "link": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+    }
+  ]
+}
