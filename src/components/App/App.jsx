@@ -80,10 +80,10 @@ function App() {
 
   function handleDeleteItem(card) {
     api
-      .deleteItem(card.id)
+      .deleteItem(card._id)
       .then(() => {
         setClothingItems((items) =>
-          items.filter((item) => item.id !== card.id),
+          items.filter((item) => item._id !== card._id),
         );
         handleCloseModal();
       })

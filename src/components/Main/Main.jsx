@@ -22,7 +22,7 @@ function Main({ clothingItems, handleOpenItemModal, weatherData }) {
         {filteredItems.map((item) => {
           return (
             <ItemCard
-              key={item.id}
+              key={item._id}
               item={item}
               onClick={() => handleOpenItemModal(item)}
             />
