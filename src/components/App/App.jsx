@@ -66,20 +66,30 @@ function App() {
   }
 
   function handleAddItem(item, resetForm) {
-    api.addItem(item).then((newItem) => {
-      setClothingItems((items) => [newItem, ...items]);
-      resetForm();
-      handleCloseModal();
-    });
+    api
+      .addItem(item)
+      .then((newItem) => {
+        setClothingItems((items) => [newItem, ...items]);
+        resetForm();
+        handleCloseModal();
+      })
+      .catch((err) => {
+        console.error("Error adding item:", err);
+      });
   }
 
   function handleDeleteItem(card) {
-    api.deleteItem(card._id).then(() => {
-      setClothingItems((items) =>
-        items.filter((item) => item._id !== card._id),
-      );
-      handleCloseModal();
-    });
+    api
+      .deleteItem(card.id)
+      .then(() => {
+        setClothingItems((items) =>
+          items.filter((item) => item.id !== card.id),
+        );
+        handleCloseModal();
+      })
+      .catch((err) => {
+        console.error("Error deleting item:", err);
+      });
   }
 
   return (
@@ -111,6 +121,7 @@ function App() {
                 <Profile
                   clothingItems={clothingItems}
                   handleOpenItemModal={handleOpenItemModal}
+                  onAddClick={handleOpenAddGarmentModal}
                 />
               }
             />

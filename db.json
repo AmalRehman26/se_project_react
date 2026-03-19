@@ -1,16 +1,34 @@
 {
   "items": [
     {
-      "_id": "1",
+      "id": "1",
       "name": "Baseball Cap",
       "weather": "hot",
-      "link": "https://images.unsplash.com/photo-1588854337116-28a3c8fa50c1"
+      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Cap.png"
     },
     {
-      "_id": "3",
+      "id": "2",
       "name": "T-Shirt",
+      "weather": "hot",
+      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png"
+    },
+    {
+      "id": "5",
+      "name": "Shorts",
+      "weather": "hot",
+      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Shorts.png"
+    },
+    {
+      "id": "6",
+      "name": "Sneakers",
       "weather": "warm",
-      "link": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sneakers.png"
+    },
+    {
+      "name": "sweatshirt",
+      "imageUrl": "https://img.sonofatailor.com/images/customizer/product/sweatshirt-2/Black_Sweatshirt_2_Neck_Sweatshirt_2_Long_Sleeve.jpg",
+      "weather": "cold",
+      "id": "DD9GfnI"
     }
   ]
 }

@@ -22,9 +22,9 @@ function Main({ clothingItems, handleOpenItemModal, weatherData }) {
         {filteredItems.map((item) => {
           return (
             <ItemCard
-              key={item._id}
-              data={item}
-              onCardClick={handleOpenItemModal}
+              key={item.id}
+              item={item}
+              onClick={() => handleOpenItemModal(item)}
             />
           );
         })}

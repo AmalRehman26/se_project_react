@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-export default function useForm(initialValues) {
+function useForm(initialValues) {
   const [values, setValues] = useState(initialValues);
 
   function handleChange(e) {
     const { name, value } = e.target;
-    setValues({ ...values, [name]: value });
+    setValues((prev) => ({ ...prev, [name]: value }));
   }
 
   function resetForm() {
@@ -14,3 +14,5 @@ export default function useForm(initialValues) {
 
   return { values, handleChange, resetForm };
 }
+
+export default useForm;

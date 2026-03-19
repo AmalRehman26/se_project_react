@@ -9,10 +9,14 @@
   justify-content: center;
   align-items: center;
   visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1000;
 }
 
 .modal_opened {
   visibility: visible;
+  opacity: 1;
 }
 
 .modal__content {
@@ -37,11 +41,12 @@
   position: absolute;
   top: 20px;
   right: 20px;
-
   border: none;
   background: transparent;
   padding: 0;
   cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
 
 .modal__close img {
@@ -56,21 +61,27 @@
   flex-direction: column;
 }
 
-/* Submit button (image) */
+/* Submit button */
 .modal__submit {
+  align-self: center;
+  background-color: #000;
+  color: #fff;
   border: none;
-  background: transparent;
-  padding: 0;
+  border-radius: 4px;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
-  margin-top: 12px;
+  margin-top: 16px;
+  transition: background-color 0.2s;
+  width: 100%;
 }
 
-.modal__submit img {
-  display: block;
+.modal__submit:hover {
+  background-color: #333;
 }
 
-/* Disabled state (optional if you implement validation) */
 .modal__submit:disabled {
-  opacity: 0.5;
+  background-color: #888;
   cursor: not-allowed;
 }

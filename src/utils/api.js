@@ -1,7 +1,14 @@
 const baseUrl = "http://localhost:3001";
 
+function checkResponse(res) {
+  if (res.ok) {
+    return res.json();
+  }
+  return Promise.reject(`Error: ${res.status} ${res.statusText}`);
+}
+
 export const getItems = () => {
-  return fetch(`${baseUrl}/items`).then((res) => res.json());
+  return fetch(`${baseUrl}/items`).then(checkResponse);
 };
 
 export const addItem = (item) => {
@@ -11,11 +18,16 @@ export const addItem = (item) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(item),
-  }).then((res) => res.json());
+  }).then(checkResponse);
 };
 
 export const deleteItem = (id) => {
   return fetch(`${baseUrl}/items/${id}`, {
     method: "DELETE",
+  }).then((res) => {
+    if (!res.ok) {
+      return Promise.reject(`Error: ${res.status} ${res.statusText}`);
+    }
+    return res;
   });
 };

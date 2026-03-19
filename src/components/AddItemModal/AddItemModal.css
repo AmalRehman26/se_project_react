@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
   font-size: 16px;
+  font-weight: 400;
   margin-bottom: 24px;
+  gap: 4px;
 }
 
 /* Inputs */
@@ -13,22 +15,29 @@
   padding: 8px 0;
   font-size: 16px;
   outline: none;
+  font-weight: 400;
 }
 
+.modal__input::placeholder {
+  color: #888;
+}
+
+/* Radio fieldset */
 .modal__radio-buttons {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-
+  gap: 16px;
   border: none;
   padding: 0;
-  margin: 0 0 32px;
+  margin: 0 0 28px;
 }
 
 /* Legend */
 .modal__legend {
   font-size: 16px;
-  margin-bottom: 8px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  padding: 0;
 }
 
 /* Radio label */
@@ -37,9 +46,15 @@
   align-items: center;
   gap: 8px;
   font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 /* Radio input */
 .modal__radio-input {
   margin: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #000;
 }

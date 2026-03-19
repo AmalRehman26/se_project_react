@@ -16,6 +16,7 @@ function AddItemModal({ isOpen, onClose, onAddItem }) {
 
   return (
     <ModalWithForm
+      name="add-garment"
       title="New garment"
       isOpen={isOpen}
       onClose={onClose}
@@ -39,7 +40,7 @@ function AddItemModal({ isOpen, onClose, onAddItem }) {
         Image URL
         <input
           className="modal__input"
-          type="url"
+          type="text"
           name="imageUrl"
           placeholder="Image URL"
           required
@@ -48,10 +49,10 @@ function AddItemModal({ isOpen, onClose, onAddItem }) {
         />
       </label>
 
-      <fieldset className="modal__fieldset">
+      <fieldset className="modal__radio-buttons">
         <legend className="modal__legend">Select the weather type:</legend>
 
-        <label className="modal__radio-label">
+        <label className="modal__label_type_radio">
           <input
             className="modal__radio-input"
             type="radio"
@@ -63,7 +64,7 @@ function AddItemModal({ isOpen, onClose, onAddItem }) {
           Hot
         </label>
 
-        <label className="modal__radio-label">
+        <label className="modal__label_type_radio">
           <input
             className="modal__radio-input"
             type="radio"
@@ -75,7 +76,7 @@ function AddItemModal({ isOpen, onClose, onAddItem }) {
           Warm
         </label>
 
-        <label className="modal__radio-label">
+        <label className="modal__label_type_radio">
           <input
             className="modal__radio-input"
             type="radio"

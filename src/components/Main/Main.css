@@ -1,20 +1,14 @@
-.main {
-  padding: 40px 0;
+.main__card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .main__text {
-  font-family: "Cabinet Grotesk Bold", sans-serif;
   font-size: 20px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 34px;
-}
-
-.main__card-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+  font-weight: 400;
+  margin: 20px 0 16px;
 }
