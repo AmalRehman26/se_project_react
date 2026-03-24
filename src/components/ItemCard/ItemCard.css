@@ -45,3 +45,30 @@
   height: 100%;
   object-fit: cover;
 }
+
+.card__like-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.6;
+  transition:
+    opacity 0.2s,
+    color 0.2s;
+  z-index: 1;
+  padding: 0;
+  line-height: 1;
+}
+
+.card__like-btn:hover {
+  opacity: 1;
+}
+
+.card__like-btn_active {
+  color: #e53935;
+  opacity: 1;
+}

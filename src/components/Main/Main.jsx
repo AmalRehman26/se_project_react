@@ -4,7 +4,13 @@ import WeatherCard from "../WeatherCard/WeatherCard";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
 import "./Main.css";
 
-function Main({ clothingItems, handleOpenItemModal, weatherData }) {
+function Main({
+  clothingItems,
+  handleOpenItemModal,
+  weatherData,
+  isLoggedIn,
+  onLikeItem,
+}) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
 
   const filteredItems = clothingItems.filter((item) => {
@@ -19,15 +25,15 @@ function Main({ clothingItems, handleOpenItemModal, weatherData }) {
         {currentTemperatureUnit} / You may want to wear:
       </p>
       <ul className="main__card-list">
-        {filteredItems.map((item) => {
-          return (
-            <ItemCard
-              key={item._id}
-              item={item}
-              onClick={() => handleOpenItemModal(item)}
-            />
-          );
-        })}
+        {filteredItems.map((item) => (
+          <ItemCard
+            key={item._id}
+            item={item}
+            onClick={() => handleOpenItemModal(item)}
+            onLikeItem={onLikeItem}
+            isLoggedIn={isLoggedIn}
+          />
+        ))}
       </ul>
     </main>
   );

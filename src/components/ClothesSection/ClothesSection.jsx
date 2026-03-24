@@ -1,7 +1,13 @@
 import ItemCard from "../ItemCard/ItemCard";
 import "./ClothesSection.css";
 
-function ClothesSection({ clothingItems, onAddClick, handleOpenItemModal }) {
+function ClothesSection({
+  clothingItems,
+  onAddClick,
+  handleOpenItemModal,
+  onLikeItem,
+  isLoggedIn,
+}) {
   return (
     <div className="clothes-section">
       <div className="clothes-section__header">
@@ -17,6 +23,8 @@ function ClothesSection({ clothingItems, onAddClick, handleOpenItemModal }) {
             key={item._id}
             item={item}
             onClick={() => handleOpenItemModal(item)}
+            onLikeItem={onLikeItem}
+            isLoggedIn={isLoggedIn}
           />
         ))}
       </ul>

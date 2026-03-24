@@ -1,0 +1,81 @@
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import useForm from "../../hooks/useForm";
+
+function RegisterModal({ isOpen, onClose, onRegister }) {
+  const { values, handleChange, resetForm } = useForm({
+    name: "",
+    avatar: "",
+    email: "",
+    password: "",
+  });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    onRegister(values, resetForm);
+  }
+
+  return (
+    <ModalWithForm
+      name="register"
+      title="Sign Up"
+      isOpen={isOpen}
+      onClose={onClose}
+      onSubmit={handleSubmit}
+      buttonText="Sign Up"
+    >
+      <label className="modal__label">
+        Email
+        <input
+          className="modal__input"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          value={values.email}
+          onChange={handleChange}
+        />
+      </label>
+
+      <label className="modal__label">
+        Password
+        <input
+          className="modal__input"
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          value={values.password}
+          onChange={handleChange}
+        />
+      </label>
+
+      <label className="modal__label">
+        Name
+        <input
+          className="modal__input"
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+          value={values.name}
+          onChange={handleChange}
+        />
+      </label>
+
+      <label className="modal__label">
+        Avatar URL
+        <input
+          className="modal__input"
+          type="text"
+          name="avatar"
+          placeholder="Avatar URL"
+          required
+          value={values.avatar}
+          onChange={handleChange}
+        />
+      </label>
+    </ModalWithForm>
+  );
+}
+
+export default RegisterModal;

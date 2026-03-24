@@ -1,24 +1,20 @@
 .header {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   font-family: "Cabinet Grotesk Bold", sans-serif;
   padding: 20px 0;
   gap: 20px;
 }
-.header__profile {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-}
 
 .header__logo {
-  margin-right: 24px;
+  height: 24px;
+  margin-right: 4px;
 }
 
 .header__place {
   margin: 0;
+  margin-right: auto;
   font-family: "Cabinet Grotesk Bold", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -26,26 +22,19 @@
 
 .header__datetime {
   font-family: "Cabinet Grotesk Bold", sans-serif;
-}
-
-.header__add-clothes-btn {
-  /* margin-left: auto; */
-  font-family: "Cabinet Grotesk Bold", sans-serif;
   font-size: 20px;
-  font-weight: 700;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: opacity 0.3s;
 }
 
-.header__add-clothes-btn:hover {
-  opacity: 0.6;
+.header__profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #000;
 }
 
 .header__username {
   margin: 0;
-  padding-left: 20px;
   font-family: "Cabinet Grotesk Bold", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -55,5 +44,74 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  object-fit: cover;
+  margin-left: 12px;
+}
+
+.header__add-clothes-btn {
+  font-family: "Cabinet Grotesk Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s;
+}
+
+.header__add-clothes-btn:hover {
+  opacity: 0.6;
+}
+
+.header__user-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__signup-btn {
+  border: none;
+  background: none;
+  font-family: "Cabinet Grotesk Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.header__signin-btn {
+  border: none;
+  background: none;
+  font-family: "Cabinet Grotesk Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0;
+}
+
+.header__signup-btn:hover,
+.header__signin-btn:hover {
+  opacity: 0.6;
+}
+
+.header__avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
   margin-left: 12px;
 }
