@@ -11,3 +11,6 @@ Currently, two official plugins are available:
 
 Check out https://drive.google.com/file/d/1-uhasy9FV4rwhluJxc4Vh5FLZi3fcRT4/view?usp=sharing, where I describe my
 project and some challenges I faced while building it.
+
+
+GitHub: https://github.com/AmalRehman26/se_project_react

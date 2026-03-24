@@ -1,7 +1,7 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import useForm from "../../hooks/useForm";
 
-function RegisterModal({ isOpen, onClose, onRegister }) {
+function RegisterModal({ isOpen, onClose, onRegister, onSwitchToLogin }) {
   const { values, handleChange, resetForm } = useForm({
     name: "",
     avatar: "",
@@ -74,6 +74,10 @@ function RegisterModal({ isOpen, onClose, onRegister }) {
           onChange={handleChange}
         />
       </label>
+
+      <button type="button" className="modal__switch" onClick={onSwitchToLogin}>
+        or Sign In
+      </button>
     </ModalWithForm>
   );
 }

@@ -31,7 +31,6 @@ function ItemModal({ card, isOpen, onClose, onDelete }) {
       >
         <div className="modal__content" onClick={(e) => e.stopPropagation()}>
           <button type="button" className="modal__close" onClick={onClose} />
-
           <div className="modal__image-container">
             <img
               src={card.imageUrl || card.link}
@@ -39,7 +38,6 @@ function ItemModal({ card, isOpen, onClose, onDelete }) {
               className="modal__image"
             />
           </div>
-
           <div className="modal__caption">
             <div className="modal__info">
               <h2 className="modal__title">{card.name}</h2>
