@@ -24,6 +24,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 
 .modal__close {
@@ -68,6 +69,8 @@
   height: 360px;
   overflow: hidden;
   flex-shrink: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .modal__image {
@@ -75,6 +78,8 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .modal__caption {

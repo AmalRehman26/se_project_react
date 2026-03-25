@@ -21,7 +21,6 @@ function RegisterModal({ isOpen, onClose, onRegister, onSwitchToLogin }) {
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
-      buttonText="Sign Up"
     >
       <label className="modal__label">
         Email
@@ -75,9 +74,18 @@ function RegisterModal({ isOpen, onClose, onRegister, onSwitchToLogin }) {
         />
       </label>
 
-      <button type="button" className="modal__switch" onClick={onSwitchToLogin}>
-        or Sign In
-      </button>
+      <div className="modal__footer">
+        <button type="submit" className="modal__submit">
+          Sign Up
+        </button>
+        <button
+          type="button"
+          className="modal__switch"
+          onClick={onSwitchToLogin}
+        >
+          or Sign In
+        </button>
+      </div>
     </ModalWithForm>
   );
 }
